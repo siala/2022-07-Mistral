@@ -9,7 +9,7 @@ CCC = g++
 #CCC = g++-5
 
 # BOOSTDIR = /Users/Shared/boost_1_78_0
-
+BOOSTDIR = ../boost 
 XCSP3DIR=$(MAINDIR)/XCSP3-CPP-Parser
 
 
@@ -31,7 +31,7 @@ XCPP_FILES := $(wildcard $(XSRC)/*.cc)
 XOBJ_FILES := $(addprefix $(XOBJ)/,$(notdir $(XCPP_FILES:.cc=.o)))
 
 
-CFLAGS = -Wall -std=c++11 $(COPTIMIZE) -I$(COMPILER_PATH) -I$(INC) -I$(TCL) 
+CFLAGS = -Wall -std=c++11 $(COPTIMIZE) -I$(BOOSTDIR)  -I$(INC) -I$(TCL) 
 
 
 MODELS = $(wildcard $(MOD)/src/*.cpp)
