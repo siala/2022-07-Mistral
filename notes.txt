@@ -1,0 +1,4 @@
+
+
+
+With respect to the original Mistral, remove the compiler path from the -I options 
